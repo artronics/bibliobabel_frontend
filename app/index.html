@@ -9,35 +9,87 @@
   <title>My AngularJS App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="../wwwroot/css/bootstrap.css">
+  <link rel="stylesheet" href="../wwwroot/css/font-awesome.css">
   <link rel="stylesheet" href="app.css">
-  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+  <script src="../bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+<!--
+          ********************* NAV BAR SECTION
+-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Bibliobabel</a>
+    </div>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"><i class="fa fa-book fa-lg"></i><span class="badge">1</span><span class="sr-only">(current)</span></a></li>
+        <li><a href="#"><i class="fa fa-comments fa-lg"></i><span class="badge">1</span></a></li>
+        <li><a href="#"><i class="fa fa-globe fa-lg"></i><span class="badge">1</span></a></li>
+      </ul>
 
-  <div ng-view></div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><img src="http://lorempixel.com/25/25" alt=""/><span>&nbsp; Seyed Jalal Hosseini</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog fa-lg"></i><span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><i class="fa fa-cog fa-fw"></i>&nbsp; Settings</a></li>
+            <li><a href="#"><i class="fa fa-question-circle fa-fw"></i>&nbsp; Help</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="fa fa-sign-out fa-fw"></i>&nbsp; Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!--
+          ********************  END OF NAV BAR
+-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-3">
+      <h2>kir</h2>
+    </div>
 
-  <div>Angular seed app: v<span app-version></span></div>
+    <div class="col-xs-6">
+      <!--
+          ******************** POSTS
+      -->
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
+      <!--
+          ******************** END OF POSTS
+      -->
+    </div>
+
+    <div class="col-xs-3">
+      <h2>kos</h2>
+    </div>
+  </div>
+</div>
+
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+  <script src="../wwwroot/js/jquery.js"></script>
+  <script src="../wwwroot/js/bootstrap.js"></script>
 </body>
 </html>

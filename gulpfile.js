@@ -35,13 +35,17 @@ gulp.task('css', function() {
 
 gulp.task('copy-css', function() { 
     return gulp.src([config.bowerDir + "/bootstrap/dist/css/bootstrap.css",
-                     config.bowerDir + "/bootstrap/dist/css/bootstrap-theme.css"])
+        config.bowerDir + "/bootstrap/dist/css/bootstrap-theme.css",
+        config.bowerDir + "/font-awesome/css/font-awesome.css",
+        config.bowerDir + "/font-awesome/css/font-awesome.css.map",
+    ])
         .pipe(gulp.dest(config.wwwroot + "/css")); 
 });
 
 gulp.task('copy-js', function() { 
     return gulp.src([
         config.bowerDir + "/bootstrap/dist/js/bootstrap.js",
+        config.bowerDir + "/jquery/jquery.js",
         config.bowerDir + "/angular/angular.js",
         config.bowerDir + "/angular/angular.min.js.map",
         config.bowerDir + "/angular-loader/angular-loader.js",
