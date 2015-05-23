@@ -1,22 +1,17 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>My AngularJS App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="../bower_components/html5-boilerplate/css/normalize.css">
+
   <link rel="stylesheet" href="../wwwroot/css/bootstrap.css">
   <link rel="stylesheet" href="../wwwroot/css/font-awesome.css">
   <link rel="stylesheet" href="app.css">
   <script src="../bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
-<body>
+<body ng-app="bibliobabel">
 <!--
           ********************* NAV BAR SECTION
 -->
@@ -59,20 +54,30 @@
 <!--
           ********************  END OF NAV BAR
 -->
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="MainCtrl as Main">
   <div class="row">
     <div class="col-xs-3">
-      <h2>kir</h2>
+        <h2>time is{{helloTo.title}} to the world of Tutorialspoint!</h2>
+        <h2>time is{{main.time1}} to the world of Tutorialspoint!</h2>
     </div>
 
-    <div class="col-xs-6">
-      <!--
-          ******************** POSTS
-      -->
-
-      <!--
-          ******************** END OF POSTS
-      -->
+    <div class="col-xs-6" ng-controller="PostCtrl as Post">
+      <div>
+        <h2>Welcome {{Post.posts[0].content.rtf}} to the world of Tutorialspoint!</h2>
+      </div>
+        <article class="panel-default" ng-repeat="post in Post.posts">
+            <header class="page-header">
+                <div class="media">
+                    <div class="pull-left">
+                        <a href="#"><img class="media-object" src={{post.user.image}} alt="..."></a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{post.user.screenName}}</h4>
+                        <small><time title="{{ post.createdAt | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}" am-time-ago="post.createdAt"></time></small>
+                    </div>
+                </div>
+            </header>
+        </article>
     </div>
 
     <div class="col-xs-3">
@@ -81,15 +86,15 @@
   </div>
 </div>
 
-  <script src="../bower_components/angular/angular.js"></script>
-  <script src="../bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
-  <script src="../wwwroot/js/jquery.js"></script>
-  <script src="../wwwroot/js/bootstrap.js"></script>
+<script src="../wwwroot/data/data_underTest.js"></script>
+<script src="../wwwroot/js/angular.js"></script>
+<script src="../wwwroot/js/moment.min.js"></script>
+<script src="../wwwroot/js/angular-moment.js"></script>
+<script src="app.js"></script>
+<script src="../wwwroot/js/jquery.js"></script>
+<script src="../wwwroot/js/bootstrap.js"></script>
+<script>
+    console.log();
+</script>
 </body>
 </html>
