@@ -51,6 +51,7 @@ gulp.task('copy-js', function() { 
         config.bowerDir + "/moment/min/moment.min.js",
         config.bowerDir + "/angular-moment/angular-moment.js",
         config.bowerDir + "/angular-moment/angular-moment.min.js.map",
+        config.bowerDir + "/angular-ui-router/release/angular-ui-router.js",
         config.bowerDir + "/angular-loader/angular-loader.js",
         config.bowerDir + "/angular-loader/angular-loader.min.js.map",
         config.bowerDir + "/angular-mocks/angular-mocks.js",

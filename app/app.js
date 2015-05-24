@@ -1,7 +1,8 @@
 'use strict';
 
 var bibliobabel = angular.module("bibliobabel", [
-    'angularMoment'
+    'angularMoment',
+    'ui.router'
 ]);
 
 bibliobabel.controller("MainCtrl", [function() {

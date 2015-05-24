@@ -20,6 +20,7 @@
     "font-awesome": "~4.3.0",
     "bootstrap-sass-official": "~3.3.4",
     "angular-moment": "~0.10.1",
-    "moment": "~2.10.3"
+    "moment": "~2.10.3",
+    "angular-ui-router": "~0.2.15"
   }
 }
