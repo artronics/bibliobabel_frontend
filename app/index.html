@@ -57,20 +57,12 @@
 <div class="container-fluid" ng-controller="MainCtrl as Main">
   <div class="row">
     <div class="col-xs-3">
-        <h2>time is{{helloTo.title}} to the world of Tutorialspoint!</h2>
-        <h2>time is{{main.time1}} to the world of Tutorialspoint!</h2>
-        <h1>kir <small>kir</small></h1><small>kir</small>
-        <h4>kir <small>kir</small></h4><small>kir</small>
+        <h3>{{}}</h3>
     </div>
 
     <div class="col-xs-6" ng-controller="PostCtrl as Post">
-      <div>
-        <h2>Welcome {{Post.comment[1].content}} to the world of Tutorialspoint!</h2>
-          <ul ng-repeat="comment in Post.comments">
-              <li>{{comment.content}}</li>
-          </ul>
-      </div>
-          <h5>{{Post.kir(Post.comments)}}kri</h5>
+        <h3>{{kir}}</h3>
+          <!--<h5>{{Post.kir(Post.comments)}}kri</h5>-->
         <article class="panel-default" ng-repeat="post in Post.posts">
             <header class="page-header">
                 <div class="media">
@@ -134,7 +126,6 @@
                         <div class="media-body">
                             <p ng-bind="comment.content.text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
                             <div class="pull-right">
-                                <a href="">Replay</a>
                                 <a href="">Like</a>
                             </div>
                         </div>

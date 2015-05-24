@@ -4,11 +4,15 @@ module.exports = function(config){
     basePath : './',
 
     files : [
-      'wwwroot/js/angular.js',
-      'wwwroot/js/angular-route.js',
-      'wwwroot/js/angular-mocks.js',
-      'app/components/**/*.js',
-      'app/view*/**/*.js'
+        'wwwroot/js/angular.js',
+        'wwwroot/js/angular-route.js',
+        'wwwroot/js/angular-mocks.js',
+        'wwwroot/js/angular-moment.js',
+        'app/components/**/*.js',
+        'app/view*/**/*.js',
+        'test/unit/**/',
+        'app/*.js',
+        'wwwroot/data/*.js'
     ],
 
     autoWatch : true,
