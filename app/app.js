@@ -8,9 +8,10 @@ bibliobabel.controller("MainCtrl", [function() {
     var self = this;
 }]);
 
-bibliobabel.controller("PostCtrl",[function() {
+bibliobabel.controller("PostCtrl",["$filter", function() {
     var self= this;
 
     self.posts = post;
-    self.time = new Date();
+    self.comments= comments;
 }]);
+

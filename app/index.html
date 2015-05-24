@@ -59,12 +59,18 @@
     <div class="col-xs-3">
         <h2>time is{{helloTo.title}} to the world of Tutorialspoint!</h2>
         <h2>time is{{main.time1}} to the world of Tutorialspoint!</h2>
+        <h1>kir <small>kir</small></h1><small>kir</small>
+        <h4>kir <small>kir</small></h4><small>kir</small>
     </div>
 
     <div class="col-xs-6" ng-controller="PostCtrl as Post">
       <div>
-        <h2>Welcome {{Post.posts[0].content.rtf}} to the world of Tutorialspoint!</h2>
+        <h2>Welcome {{Post.comment[1].content}} to the world of Tutorialspoint!</h2>
+          <ul ng-repeat="comment in Post.comments">
+              <li>{{comment.content}}</li>
+          </ul>
       </div>
+          <h5>{{Post.kir(Post.comments)}}kri</h5>
         <article class="panel-default" ng-repeat="post in Post.posts">
             <header class="page-header">
                 <div class="media">
@@ -77,6 +83,64 @@
                     </div>
                 </div>
             </header>
+
+            <!--    Main Content of a post-->
+            <div class="panel-body">
+                <p ng-bind="post.content.rtf"></p>
+            </div>
+
+            <!--    Options bar including share and social networks bottomns-->
+            <div class="panel-options">
+                <ul class="list-inline list-unstyled">
+                    <li><a href=""><i class="fa fa-facebook-square fa-lg"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter-square fa-lg"></i></a></li>
+                    <li><a href=""><i class="fa fa-google-plus-square fa-lg"></i></a></li>
+                    <li><a href=""><i class="fa fa-pinterest-square fa-lg"></i></a></li>
+                    <li class="pull-right"><a href=""><i class="fa fa-heart fa-2x"></i></a></li>
+                    <li class="pull-right"><a href=""><i class="fa fa-share-square fa-2x"></i></a></li>
+                </ul>
+            </div>
+
+            <!--    Footer section including comments-->
+            <footer class="panel-footer">
+                <!--    Comment input-->
+                <div class="media">
+                    <div class="pull-left">
+                        <a href="#">
+                            <img class="media-object" src="http://lorempixel.com/30/30" alt="...">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <div class="col-xs-12">
+                            <div class="input-group">
+                                <textarea type="text" class="form-control" placeholder="Search for..." rows="1"></textarea>
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Send</button>
+                  </span>
+                            </div><!-- /input-group -->
+                        </div>
+                    </div>
+                </div>
+
+                <!--    Comments-->
+                <ul class="media-list" ng-repeat="comment in post.comments">
+                    <li class="media">
+                        <div class="pull-left">
+                            <a href="#"><img class="media-object" src="{{comment.owner.image}}" alt="..."></a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading" ng-cloak>{{comment.owner.screenName}} <small><time title="{{ comment.createdAt | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}" am-time-ago="comment.createdAt"></time></small></h4>
+                        </div>
+                        <div class="media-body">
+                            <p ng-bind="comment.content.text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                            <div class="pull-right">
+                                <a href="">Replay</a>
+                                <a href="">Like</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </footer>
         </article>
     </div>
 

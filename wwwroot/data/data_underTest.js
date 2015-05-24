@@ -25,8 +25,8 @@ var post =
             comments: [
                 {
                     id: 5,
-                    createdAt:"",
-                    updatedAt:"",
+                    createdAt: "2015-05-23T16:11:04Z",
+                    updatedAt: "2015-06-10T20:11:04Z",
                     replyTo:"",
                     likes: 10,
                     replies: 2,
@@ -65,8 +65,8 @@ var post =
         comments: [
             {
                 id: 5,
-                createdAt:"",
-                updatedAt:"",
+                createdAt: "2015-05-23T16:11:04Z",
+                updatedAt: "2015-06-10T20:11:04Z",
                 replyTo:"",
                 likes: 10,
                 replies: 2,
@@ -82,3 +82,42 @@ var post =
         ]
     }
     ];
+
+var comments=[
+    {
+        id:0,
+        repliedTo:null,
+        content:"a parent comment with no replies"
+    },
+    {
+        id:1,
+        repliedTo:null,
+        content:"a parent comment with replies"
+    },
+    {
+        id:2,
+        repliedTo:1,
+        content:"a reply to comment id 2"
+    },
+    {
+        id:3,
+        repliedTo:2,
+        content:"a reply to a reply (comment id 3) "
+    },
+    {
+        id:4,
+        repliedTo:null,
+        content:"a comment without reply "
+    },
+    {
+        id:5,
+        repliedTo:3,
+        content:"a reply to a reply (comment id 4) "
+    },
+    {
+        id:6,
+        repliedTo:2,
+        content:"a reply to a reply (comment id 3) "
+    },
+];
+
