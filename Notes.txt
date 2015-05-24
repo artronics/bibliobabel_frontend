@@ -1,0 +1,5 @@
+for creating nested comments see:
+    http://ngmodules.org/modules/angular-ui-tree
+
+for jamine asserts example and documentation see:
+    http://jasmine.github.io/1.3/introduction.html?#section-Matchers
