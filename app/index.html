@@ -115,16 +115,19 @@
                 </div>
 
                 <!--    Comments-->
-                <ul class="media-list" ng-repeat="comment in post.comments">
+                <div>
+                    <small ng-show="post.comment.count == 0">No comment yet!</small>
+                </div>
+                <ul class="media-list" ng-repeat="comment in post.comment.comments">
                     <li class="media">
                         <div class="pull-left">
                             <a href="#"><img class="media-object" src="{{comment.owner.image}}" alt="..."></a>
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading" ng-cloak>{{comment.owner.screenName}} <small><time title="{{ comment.createdAt | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}" am-time-ago="comment.createdAt"></time></small></h4>
+                            <h4 class="media-heading" ng-cloak>{{comment.owner.displayName}} <small><time title="{{ comment.createdAt | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}" am-time-ago="comment.createdAt"></time></small></h4>
                         </div>
                         <div class="media-body">
-                            <p ng-bind="comment.content.text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                            <p ng-bind="comment.content.text"></p>
                             <div class="pull-right">
                                 <a href="">Like</a>
                             </div>

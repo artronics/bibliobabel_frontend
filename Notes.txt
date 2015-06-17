@@ -3,3 +3,11 @@ for creating nested comments see:
 
 for jamine asserts example and documentation see:
     http://jasmine.github.io/1.3/introduction.html?#section-Matchers
+
+
+Here is a guide for json structure
+    https://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml
+If a property is optional or has an empty or null value,
+    consider dropping the property from the JSON,
+    unless there's a strong semantic reason for its existence.
+

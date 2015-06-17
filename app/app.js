@@ -15,6 +15,8 @@ bibliobabel.controller("PostCtrl",['$scope', function($scope) {
     $scope.kir="kos";
     self.foo="bar";
     self.posts = post;
-    self.comments= comments;
+    console.log(self.posts[0].comment.comments.length);
+    console.log(self.posts[0].comment.count);
+    //self.comments= comments;
 }]);
 
